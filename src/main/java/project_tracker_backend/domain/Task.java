@@ -25,4 +25,8 @@ public class Task {
 
     @Column(nullable = false, name = "status")
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "project_id")
+    private Project project;
 }
