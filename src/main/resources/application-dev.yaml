@@ -4,6 +4,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: test
     password: develop
+  flyway:
+    url: jdbc:mysql://localhost:8080/feedback_intern
+    user: test
+    password: develop
+    locations: classpath:db/migration
   jpa:
     hibernate:
       ddl-auto: update

@@ -10,4 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TaskCreationDto {
+
+    private String name;
+    private String description;
+    private String status;
+    private Long projectId;
 }

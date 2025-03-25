@@ -10,4 +10,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProjectCreationDto {
+
+    private String name;
+    private String description;
+    private String status;
+    private Long userId;
+
+
 }
