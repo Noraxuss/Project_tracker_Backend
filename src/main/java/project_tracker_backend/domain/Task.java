@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tasks")
 @Getter
@@ -29,4 +31,11 @@ public class Task {
     @ManyToOne
     @JoinColumn(name = "project_id")
     private Project project;
+
+    @OneToMany
+    private List<Task> subTasks;
+
+    @ManyToOne
+    @JoinColumn(name = "task_id")
+    private Task parentTask;
 }
