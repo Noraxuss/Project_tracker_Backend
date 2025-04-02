@@ -26,7 +26,7 @@ public class ProjectService {
         Project project = projectMapper.mapProjectCreationDtoToProject(projectCreationDto);
         projectRepository.save(project);
 
-        User user = userService.FindUserById(projectCreationDto.getUserId());
+        User user = userService.findUserById(projectCreationDto.getUserId());
         project.setUser(user);
     }
 

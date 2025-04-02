@@ -32,10 +32,10 @@ public class Task {
     @JoinColumn(name = "project_id")
     private Project project;
 
-    @OneToMany
-    private List<Task> subTasks;
+    @OneToMany(mappedBy = "parentTask")
+    private List<Task> subTask;
 
     @ManyToOne
-    @JoinColumn(name = "task_id")
+    @JoinColumn(name = "parent_task_id")
     private Task parentTask;
 }

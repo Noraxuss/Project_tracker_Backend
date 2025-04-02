@@ -24,6 +24,9 @@ public class User {
     @Column(nullable = false, name = "password")
     private String password;
 
+    @Column(nullable = false, name = "email")
+    private String email;
+
     @OneToMany(mappedBy = "user")
     private List<Project> project;
 

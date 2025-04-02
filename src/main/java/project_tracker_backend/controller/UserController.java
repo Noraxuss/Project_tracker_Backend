@@ -8,6 +8,7 @@ import project_tracker_backend.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
+
 public class UserController {
 
     private final UserService userService;
@@ -21,6 +22,7 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     public void registerUser(@RequestBody UserCreationDto userCreationDto) {
         //TODO logging
+        System.out.println("Registering user: " + userCreationDto);
         userService.registerUser(userCreationDto);
     }
 }

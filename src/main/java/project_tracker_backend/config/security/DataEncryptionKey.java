@@ -14,4 +14,6 @@ public class DataEncryptionKey {
         new SecureRandom().nextBytes(key);
         return Base64.getEncoder().encodeToString(key);
     }
+
+
 }

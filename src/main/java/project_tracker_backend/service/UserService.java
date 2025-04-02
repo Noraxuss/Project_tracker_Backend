@@ -1,7 +1,6 @@
 package project_tracker_backend.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import project_tracker_backend.config.security.KeyEncryptionKey;
 import project_tracker_backend.domain.User;
@@ -29,7 +28,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public User FindUserById(Long id) {
+    public User findUserById(Long id) {
         //TODO Exception throwing instead of null
         return userRepository.findById(id).orElse(null);
     }

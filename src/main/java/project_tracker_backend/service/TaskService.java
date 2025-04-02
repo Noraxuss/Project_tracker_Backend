@@ -36,6 +36,6 @@ public class TaskService {
     public void autoAssignSubTasks(Task task) {
         List<Task> autoSubTaskList = new ArrayList<>();
         // TODO when autolist is introduced this method will slightly change
-        task.setSubTasks(autoSubTaskList);
+        task.setSubTask(autoSubTaskList);
     }
 }

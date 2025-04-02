@@ -31,5 +31,4 @@ public class KeyEncryptionKey {
         );
         return encoder.encode(password);
     }
-
 }
